@@ -4,7 +4,7 @@ This model has been financed by Project PID2023-148309OA-I00 funded by MICIU/AEI
 
 # CoADD antimicrobial prediction
 
-Array of bioactivity ML models based on the CoADD data. We have built individual models for each organism and strain for which sufficient data (>100 compounds) is available. Additional cytotoxicity models have also been included. Cut-offs for binary activity are determined at 50% for percentage of inhibition and 25 uM for dose-response assays. All models achieved an AUROC > 0.7 using the LazyQSAR package. Detailed analysis is available in this [repository](https://github.com/ersilia-os/coadd-binary-tasks)
+Scores compounds across 22 antimicrobial and cytotoxicity endpoints built from the Community for Open Antimicrobial Drug Discovery screening collection. Ersilia trained a separate model for every organism and strain with at least 100 measured compounds, plus cytotoxicity readouts, binarising activity at 50% growth inhibition for single-point assays and 25 uM for dose-response. All models reached an AUROC above 0.7 in cross-validation using the LazyQSAR package.
 
 This model was incorporated on 2026-05-19.Last packaged on 2026-05-20.
 
@@ -27,7 +27,7 @@ This model was incorporated on 2026-05-19.Last packaged on 2026-05-20.
 ### Output
 - **Output Dimension:** `22`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Classification score (rank) for pathogen inhibition, with higher scores indicating stronger predicted activity.
+- **Interpretation:** Rank scores for pathogen inhibition and cytotoxicity, where higher values indicate stronger predicted activity.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
