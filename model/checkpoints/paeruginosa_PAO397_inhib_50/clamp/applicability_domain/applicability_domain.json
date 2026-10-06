@@ -3,6 +3,6 @@
   "n_features_in": 768,
   "n_cal_knots": 200,
   "cal_min": 2.687647581100464,
-  "cal_max": 10.61657428741455,
+  "cal_max": 10.616575241088867,
   "scaler": "standard"
 }
